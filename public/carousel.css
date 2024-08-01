@@ -1,0 +1,29 @@
+.carousel-item {
+    margin: 0 !important;
+    margin-right: -100% !important;
+    display: none !important;
+}
+
+.carousel-item.active {
+    display: block !important;
+}
+
+.carousel-item-next {
+    display: block !important;
+}
+
+.carousel-item-prev {
+    display: block !important;
+}
+
+.carousel-control-prev-icon {
+    filter: invert(100%);
+}
+
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.card {
+    height: 100% !important;
+}
