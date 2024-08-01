@@ -12,7 +12,7 @@ const Logout = () => {
         );
         localStorage.clear();
         delete axios.defaults.headers.common['Authorization'];
-        window.location.href = '/login';  // Redirect to login page after logout
+        window.location.href = '/login';
       } catch (error) {
         console.log('Logout failed:', error);
       }
@@ -21,7 +21,7 @@ const Logout = () => {
     logout();
   }, []);
 
-  return null; // or a loading spinner/message while logging out
+  return null;
 };
 
 export default Logout;

@@ -63,34 +63,34 @@ const TrackOrders = () => {
   return (
     <div className="container mt-5">
       {order ? (
-          <div>
-            <h1 className="display-4 mb-4">Order Summary</h1>
-            <div className='card'>
-                <div className='card-body'>    
-                    <ul className='list-group list-group-flush'>
-                        {order.items.map(item => (
-                            <li key={item.id} className='list-group-item'>
-                                <div className='d-flex justify-content-between align-items-center'>
-                                    <span>{item.product.name}</span>
-                                    <span>Quantity: {item.quantity}, Price: ${item.price}</span>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className='mt-4'>
-                        <p className='card-text'>
-                            <strong>Shipping to:</strong> {order.shipping_line1}, {order.shipping_city} {order.shipping_postal_code}
-                        </p>
-                        <p>
-                            <strong>Tracking Number:</strong> {order.order_code}
-                        </p>
-                        <p>
-                            <strong>Created at:</strong> {formatDateTime(order.created_at)}
-                        </p>
+        <div>
+          <h1 className="display-4 mb-4">Order Summary</h1>
+          <div className='card'>
+            <div className='card-body'>    
+              <ul className='list-group list-group-flush'>
+                {order.items.map(item => (
+                  <li key={item.id} className='list-group-item'>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <span>{item.product.name}</span>
+                      <span>Quantity: {item.quantity}, Price: ${item.price}</span>
                     </div>
-                </div>
+                  </li>
+                ))}
+              </ul>
+              <div className='mt-4'>
+                <p className='card-text'>
+                  <strong>Shipping to:</strong> {order.shipping_line1}, {order.shipping_city} {order.shipping_postal_code}
+                </p>
+                <p>
+                  <strong>Tracking Number:</strong> {order.order_code}
+                </p>
+                <p>
+                  <strong>Created at:</strong> {formatDateTime(order.created_at)}
+                </p>
+              </div>
             </div>
           </div>
+        </div>
       ) : (
         <div>
           {error ? (

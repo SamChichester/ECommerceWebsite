@@ -5,7 +5,6 @@ import axiosInstance from '../interceptors/axios';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
-
   useEffect(() => {
     const getCategories = async () => {
       try {
@@ -24,15 +23,15 @@ const Categories = () => {
       {categories.length > 0 ? (
         <div className="row">
           {categories.map((category) => (
-              <div className="col-md-4 mb-4" key={category.id}>
-                <div className="card h-100 shadow-sm">
-                  <div className="card-body text-center">
-                    <Link to={`/categories/${category.id}`} className="text-decoration-none text-dark">
-                      <h5 className="card-title">{category.name}</h5>
-                    </Link>
-                  </div>
+            <div className="col-md-4 mb-4" key={category.id}>
+              <div className="card h-100 shadow-sm">
+                <div className="card-body text-center">
+                  <Link to={`/categories/${category.id}`} className="text-decoration-none text-dark">
+                    <h5 className="card-title">{category.name}</h5>
+                  </Link>
                 </div>
               </div>
+            </div>
           ))}
         </div>
       ) : (

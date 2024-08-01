@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -36,21 +36,21 @@ const Login = () => {
   return(
     <div className="container mt-5">
       <form onSubmit={submit}>
-          <div className="mb-3">
-              <h3>Sign In</h3>
-          </div>
-          <div className="mb-3">
-              <label htmlFor="username" className="form-label">Username</label>
-              <input type="text" className="form-control" id="username" placeholder="Enter Username" value={username} required onChange={(e) => setUsername(e.target.value)} />
-          </div>
-          <div className="mb-3">
-              <label htmlFor="password" className="form-label">Password</label>
-              <input type="password" className="form-control" id="password" placeholder="Enter Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
-          </div>
-          <div className="mb-3">
-              {error && <p className="text-danger">{error}</p>}
-              <button type="submit" className="btn btn-primary">Submit</button>
-          </div>
+        <div className="mb-3">
+          <h3>Sign In</h3>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">Username</label>
+          <input type="text" className="form-control" id="username" placeholder="Enter Username" value={username} required onChange={(e) => setUsername(e.target.value)} />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input type="password" className="form-control" id="password" placeholder="Enter Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <div className="mb-3">
+          {error && <p className="text-danger">{error}</p>}
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </div>
       </form>
       <Link to='http://localhost:3000/register' className="btn btn-link">Sign Up</Link>
     </div>

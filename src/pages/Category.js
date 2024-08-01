@@ -6,7 +6,6 @@ const Category = () => {
   const { id } = useParams();
   const [category, setCategory] = useState({});
   const [products, setProducts] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const getCategory = async (id) => {

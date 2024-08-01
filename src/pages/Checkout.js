@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axiosInstance from '../interceptors/axios';
 
-
 const Checkout = () => {
   const [cartItems, setCartItems] = useState([]);
   const [sessionId, setSessionId] = useState(null);
@@ -35,9 +34,9 @@ const Checkout = () => {
 
   return (
     <div>
-        <form onSubmit={handleFormSubmit}>
-          <button type="submit">Checkout</button>
-        </form>
+      <form onSubmit={handleFormSubmit}>
+        <button type="submit">Checkout</button>
+      </form>
     </div>
   );
 };
