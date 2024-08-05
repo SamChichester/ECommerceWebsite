@@ -41,9 +41,13 @@ Users can view products in specific categories displayed across multiple pages.
 
 #### Cart
 Users can add items to their cart.
+
 ![Project Screenshot](https://res.cloudinary.com/dvsvlcbec/image/upload/v1722812243/3retry_gmznpj.gif)
+
 Users can remove items from their cart.
+
 ![Product Screenshot](https://res.cloudinary.com/dvsvlcbec/image/upload/v1722802302/DEMOgymwebsite_rwue5j.gif)
+
 The user does not have to be authenticated to add items to their cart. Unauthenticated users are remembered using a browser cookie.
 
 #### Elasticsearch Product Search
